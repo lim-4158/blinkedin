@@ -1,0 +1,33 @@
+.radial-chart-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.radial-chart {
+  width: 100%;
+  height: auto;
+}
+
+.chart-label {
+  font-size: 14px;
+  font-weight: 600;
+  fill: #333;
+}
+
+.scale-label {
+  font-size: 10px;
+  fill: #999;
+}
+
+.data-polygon {
+  transition: fill-opacity 0.3s ease;
+}
+
+.data-point {
+  transition: r 0.2s ease;
+}
+
+.data-point:hover {
+  r: 7;
+}
