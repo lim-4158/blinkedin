@@ -9,13 +9,6 @@ const ProfileDetail = ({ profile, onClose }) => {
     value: profile[comp]
   }));
 
-  const workingStyles = Object.entries(profile)
-    .filter(([key]) => key.startsWith('Style '))
-    .map(([key, value]) => ({
-      category: key.replace('Style ', ''),
-      value
-    }));
-
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -46,17 +39,6 @@ const ProfileDetail = ({ profile, onClose }) => {
           </div>
         </div>
 
-        <div className="profile-section">
-          <h2>Working Style</h2>
-          <div className="styles-detail">
-            {workingStyles.map(style => (
-              <div key={style.category} className="style-detail-item">
-                <div className="style-category">{style.category}</div>
-                <div className="style-value">{style.value}</div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );

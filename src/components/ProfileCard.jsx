@@ -7,10 +7,6 @@ const ProfileCard = ({ profile, onClick }) => {
     .slice(0, 3)
     .map(([key, value]) => ({ name: key.replace('Core ', ''), value }));
 
-  const styles = Object.entries(profile)
-    .filter(([key]) => key.startsWith('Style '))
-    .map(([, value]) => value);
-
   return (
     <div className="profile-card" onClick={onClick}>
       <div className="card-header">
@@ -35,14 +31,6 @@ const ProfileCard = ({ profile, onClick }) => {
               </div>
               <span className="comp-value">{comp.value}</span>
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="card-styles">
-        <div className="style-tags">
-          {styles.slice(0, 3).map((style, idx) => (
-            <span key={idx} className="style-tag">{style}</span>
           ))}
         </div>
       </div>
